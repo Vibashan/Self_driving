@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="PI" value="3.1415926535897931" />
+  <!-- define macros for colors: -->
+  <xacro:macro name="red_material">
+    <material name="red">
+      <color rgba=".82 0.06 0.06 1"/>
+    </material>
+  </xacro:macro>
+  <xacro:macro name="silver_material">
+    <material name="silver">
+      <color rgba="0.6 0.6 0.6 1"/>
+    </material>
+  </xacro:macro>
+  <xacro:macro name="black_material">
+    <material name="black">
+      <color rgba="0 0 0 1"/>
+    </material>
+  </xacro:macro>
+  <xacro:macro name="fluorescent_material">
+    <material name="fluorescent">
+      <color rgba="0.8 1 0 1"/>
+    </material>
+  </xacro:macro>
+
+  <!-- define collar element macro -->
+  <xacro:macro name="collar" params="parent">
+    <link name="${parent}__COLLAR">
+      <visual>
+        <origin xyz="0 0.0004965 -0.0065" rpy="${PI/2.0} ${PI} ${PI}" />
+        <geometry>
+          <mesh filename="package://snake_control/meshes/collar.dae"/>
+        </geometry>
+        <xacro:black_material/>
+      </visual>
+    </link>
+    <joint name="${parent}__COLLAR_JOINT" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${parent}__COLLAR"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="end" params="parent">
+    <link name="${parent}__COLLAR_END">
+      <visual>
+        <origin xyz="0 0.0004965 +0.03" rpy="${PI/2.0} ${PI} ${PI}" />
+        <geometry>
+          <mesh filename="package://snake_control/meshes/collar.dae"/>
+        </geometry>
+        <xacro:black_material/>
+      </visual>
+    </link>
+    <joint name="${parent}__COLLAR_JOINT" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${parent}__COLLAR_END"/>
+    </joint>
+  </xacro:macro>
+</robot>

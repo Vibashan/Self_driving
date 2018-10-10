@@ -1,0 +1,8 @@
+prefix=/home/holy_cow/arboc_ws/devel
+
+Name: snake_control
+Description: Description of snake_control
+Version: 0.0.1
+Cflags: -I/home/holy_cow/arboc_ws/devel/include
+Libs: -L/home/holy_cow/arboc_ws/devel/lib 
+Requires: message_runtime std_msgs trajectory_msgs
