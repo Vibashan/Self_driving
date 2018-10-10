@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11   CMakeFiles/battery.dir/src/battery.cpp.o  -o /home/nikes/crazyflie_ws/devel/lib/crazyflie_tools/battery -rdynamic /home/nikes/crazyflie_ws/devel/lib/libcrazyflie_cpp.so -lboost_program_options -lusb-1.0 -Wl,-rpath,/home/nikes/crazyflie_ws/devel/lib 

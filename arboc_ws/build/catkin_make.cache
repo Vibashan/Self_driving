@@ -1,0 +1,2 @@
+gazebo_ros_control:snake_control
+-DCATKIN_DEVEL_PREFIX=/home/holy_cow/arboc_ws/devel -DCMAKE_INSTALL_PREFIX=/home/holy_cow/arboc_ws/install -G Unix Makefiles
