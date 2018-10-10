@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/listLogVariables.dir/src/listLogVariables.cpp.o  -o /home/nikes/crazyflie_ws/devel/lib/crazyflie_tools/listLogVariables -rdynamic /home/nikes/crazyflie_ws/devel/lib/libcrazyflie_cpp.so -lboost_program_options -lusb-1.0 -Wl,-rpath,/home/nikes/crazyflie_ws/devel/lib 

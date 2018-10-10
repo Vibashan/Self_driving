@@ -1,0 +1,8 @@
+prefix=/home/nikes/crazyflie_ws/devel
+
+Name: crazyflie_driver
+Description: Description of crazyflie_driver
+Version: 0.0.1
+Cflags: -I/home/nikes/crazyflie_ws/devel/include
+Libs: -L/home/nikes/crazyflie_ws/devel/lib 
+Requires: message_runtime std_msgs tf crazyflie_cpp
